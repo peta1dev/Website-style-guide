@@ -36,3 +36,4 @@ To do:
 - add ability to change colors and fonts through UI
 - check browser compatibility
 - implement a responsive design
+- implement a better solution for not allowing the test-diary class block overflow the div with class font-color-test-page bounds
