@@ -2,9 +2,9 @@
     /* Variables that can be changed to choose different color swatches */
    
     /* Background color */
-    --h-color: #D7EDDB;
-    --h-color-name: "Pastel Mint Green";
-    --h-color-code: "#D7EDDB";
+    --bg-color: #D7EDDB;
+    --bg-color-name: "Pastel Mint Green";
+    --bg-color-code: "#D7EDDB";
 
     /* Main text color */
     --mt-color: #000;
@@ -18,9 +18,9 @@
 
     /* Highlight color for box outlines etc. */
 
-    --bg-color: #FFF;
-    --bg-color-name: "White";
-    --bg-color-code: "#FFF";
+    --h-color: #FFF;
+    --h-color-name: "White";
+    --h-color-code: "#FFF";
 
     /* Link text color */
     --l-color: #999999;
