@@ -25,5 +25,14 @@ Prsonal challenges that arose in this project included:
 
 - making the nav bar static
 - how to jump to a page anchor and have it display below the nav bar instead of behind it
-- creating "flat design" buttons for the nav bar
-- using flex and grid layouts
+- creating visual indicators and interaction for "flat design" buttons for the nav bar
+- using flex and grid layouts to solve different layout issues
+- wrapping my head around inline, block and position rules
+- working out how to make text automatically change to a constrasting color on a background that can change to any color (used mix-blend-mode property although result is not always accessibility compliant)
+
+To do:
+
+- accessiblity compliance
+- add ability to change colors and fonts through UI
+- check browser compatibility
+- implement a responsive design
