@@ -21,19 +21,20 @@ In a later build (when I have done Javascript modules - only CSS and HTML have b
 
 In the first build I have not yet made the page fully accessibity-compliant, checked cross- and legacy browser compatibility issues or implemented on-page UI-controlled color and font selections, so that I can move on to the next module. I will make these checks and add features after covering Javascript.
 
-Prsonal challenges that arose in this project included:
+Personal challenges that arose in this project included:
 
-- making the nav bar static
-- how to jump to a page anchor and have it display below the nav bar instead of behind it
-- creating visual indicators and interaction for "flat design" buttons for the nav bar
-- using flex and grid layouts to solve different layout issues
-- wrapping my head around inline, block and position rules
-- working out how to make text automatically change to a constrasting color on a background that can change to any color (used mix-blend-mode property although result is not always accessibility compliant)
+*     making the nav bar static
+*     how to jump to a page anchor and have it display below the nav bar instead of behind it
+*     creating visual indicators and interaction for "flat design" buttons for the nav bar
+*     using flex and grid layouts to solve different layout issues
+*     wrapping my head around inline, block and position rules
+*     working out how to make text automatically change to a contrasting color on a background that can change to any color (used mix-blend-mode property although result is not always accessibility compliant)
 
 To do:
 
-- accessiblity compliance
-- add ability to change colors and fonts through UI
-- check browser compatibility
-- implement a responsive design
-- implement a better solution for not allowing the test-diary class block overflow the div with class font-color-test-page bounds
+*     rename classes and variables to be more concise, consistent and appropriate to their use
+*     accessiblity compliance
+*     add ability to change colors and fonts through UI
+*     check browser compatibility
+*     implement a responsive design
+*     implement a better solution for not allowing the test-diary class block overflow the div with class font-color-test-page bounds
