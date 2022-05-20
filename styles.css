@@ -1,0 +1,396 @@
+:root {
+    /* Variables that can be changed to choose different color swatches */
+   
+    /* Background color */
+    --h-color: #D7EDDB;
+    --h-color-name: "Pastel Mint Green";
+    --h-color-code: "#D7EDDB";
+
+    /* Main text color */
+    --mt-color: #000;
+    --mt-color-name: "Black";
+    --mt-color-code: "#000";
+
+    /* Secondary text color */
+    --st-color: #A52A2A;
+    --st-color-name: "Brown";
+    --st-color-code: "#A52A2A";
+
+    /* Highlight color for box outlines etc. */
+
+    --bg-color: #FFF;
+    --bg-color-name: "White";
+    --bg-color-code: "#FFF";
+
+    /* Link text color */
+    --l-color: #999999;
+    --l-color-name: "Lead";
+    --l-color-code: "#AAAAAA";
+}
+
+/* Page Styles */
+
+html {
+    color: black;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+/* Header styles */
+
+nav {
+    display: inline-block;
+    position: fixed;
+    top: 0px;
+    padding: 1em 1em 0em 0em;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+
+    width: 100%;
+}
+
+nav a {
+    display: inline-block;
+    padding: .5em;
+    margin: 0em .25em;
+    border-bottom: solid 1px black;
+    border-left: solid 1px black;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-decoration: none;
+    width: 8em;
+    text-align: center;
+}
+
+nav a:visited {
+    color: #000;
+}
+
+nav a:hover {
+    cursor: hover;
+    background-color: #D7EDDB;
+    transition: back;
+}
+
+nav a:active {
+    border-bottom: solid 1px white;
+    border-left: solid 1px white;
+    background-color: lightgray;
+}
+
+/* Main styles */
+
+main {
+    position: relative;
+    top: 4em;
+
+}
+
+h2 {
+    border-bottom: solid 1px black;
+}
+
+section {
+    padding-bottom: 2em;
+}
+
+/* Hidden anchors make sure that section headings aren't hidden behind the nav bar when jumped to */
+
+.hidden-anchor {
+    position: relative;
+    top: -8em;
+}
+
+/* Set each colorbox's displayed color */
+
+.bground-color {
+    background-color: var(--bg-color);
+}
+
+.main-text-color {
+    background-color: var(--mt-color);
+}
+
+.secondary-text-color {
+    background-color: var(--st-color);
+}
+
+.highlight-color {
+    background-color: var(--h-color);
+}
+
+.link-color {
+    background-color: var(--l-color);
+}
+
+/* Create a flex container for the colorboxes so they wrap to next line if screen is small */
+.colors {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.colorbox {
+    box-sizing: content-box;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    padding: 15px;
+    border: solid 1px black;
+    border-radius: 15px;
+}
+
+/* Populate each colorbox with its color name and color code */
+
+.bground-color #color-name::after {
+    content: var(--bg-color-name);
+}
+
+.bground-color #color-code::after {
+    content: var(--bg-color-code);
+}
+
+.main-text-color #color-name::after {
+    content: var(--mt-color-name);
+}
+
+.main-text-color #color-code::after {
+    content: var(--mt-color-code);
+}
+
+.secondary-text-color #color-name::after {
+    content: var(--st-color-name);
+}
+
+.secondary-text-color #color-code::after {
+    content: var(--st-color-code);
+}
+
+.highlight-color #color-name::after {
+    content: var(--h-color-name);
+}
+
+.highlight-color #color-code::after {
+    content: var(--h-color-code);
+}
+
+.link-color #color-name::after {
+    content: var(--l-color-name);
+}
+
+.link-color #color-code::after {
+    content: var(--l-color-code);
+}
+
+/* Make text in colorbox contrast with chosen color for readability */
+
+.colorbox p,
+.colorbox h3 {
+    color: white;
+    mix-blend-mode: exclusion;
+}
+
+.example-box {
+    box-sizing: content-box;
+    width: 600px;
+    height: 200px;
+    margin: 20px;
+    padding: 15px;
+    border: solid 1px var(--h-color);
+    border-radius: 15px;
+    background-color: var(--bg-color);
+    color: var(--mt-color);
+}
+
+.highlight-color-example {
+    position: relative;
+    top: 5px;
+    left: 5px;
+    width: 560px;
+    height: 190px;
+    border: solid 1px var(--h-color);
+    padding: 0em 1em;
+    border-bottom: transparent;
+    border-right: transparent;
+    border-top-left-radius: 15px;
+}
+
+.example-box h3 {
+    color: var(--h-color);
+}
+
+.secondary-text-example {
+    color: var(--st-color);
+}
+
+.example-box a {
+    color: var(--l-color);
+}
+
+/* Font section styles */
+
+.fonts {
+    display: grid;
+    width: 95%;
+    margin: auto;
+    grid-template-columns: 50% 50%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.font-card {
+    border: solid 1px black;
+    margin: 20px 20px;
+    border-radius: 15px;
+    padding: 0em 1em;
+
+}
+
+.font-card h3 {
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
+}
+
+#raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+#indie-flower {
+    font-family: 'Indie Flower', cursive;
+}
+
+#permanent-marker {
+    font-family: 'Permanent Marker', cursive;
+}
+
+#special-elite {
+    font-family: 'Special Elite', cursive;
+}
+
+/* Text Styles section styles */
+.text-styles-card {
+    display: grid;
+    width: 95%;
+    grid-template-columns: 30% 70%;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+.font-details {
+    border: solid 1px black;
+    border-right: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 0rem 1rem;
+}
+
+.font-example-h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    font-style: normal;
+    margin: 1rem;
+}
+
+.font-example-h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.font-example-regular {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    font-style: normal;
+}
+
+.font-example-diary-entry {
+    font-family: 'Indie Flower', cursive;
+    font-weight: 100;
+    font-size: 30px;
+    font-style: normal;
+}
+
+.font-example-factoid {
+    font-family: 'Special Elite', cursive;
+    font-weight: 100;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.font-example-commentary {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 100;
+    font-size: 24px;
+    font-style: normal;
+}
+
+.example-font {
+    display: flex;
+    align-items: flex-start;
+    margin: 0px;
+    padding: 1rem 1rem;
+    border: solid 1px black;
+    border-left: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.font-color-test-page {
+    background-color: var(--bg-color);
+    color: var(--mt-color);
+    padding: 1em;
+}
+
+.test-heading {
+    color: var(--h-color);
+}
+
+.test-diary {
+    display: block;
+    width: 40%;
+    float: left;
+    color: var(--st-color);
+}
+
+.test-h2 {
+    color: var(--st-color);
+}
+
+.test-factoid {
+    display: block;
+    width: 200px;
+    float: right;
+    border: solid 3px var(--h-color);
+    border-radius: 15px;
+    padding: 1em;
+    margin: 1em;
+    background-color: var(--h-color);
+}
+
+.example-link {
+    color: var(--l-color);
+}
+
+.test-commentary {
+    display: inline;
+    background-color: var(--h-color);
+}
+
+/* empty space so floating element stays on example page section background */
+.filler {
+    display: block;
+    width: 100%;
+    height: 100vh;
+}
